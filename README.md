@@ -8,7 +8,7 @@ Using:
 - Apollo Client (GraphQL)
 - Jest
 
-## Why
+## Why?
 
 There are a couple of pitfalls to configure TypeScript and Apollo Client on Node environment such as:
 
