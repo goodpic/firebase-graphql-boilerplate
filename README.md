@@ -1,4 +1,4 @@
-# Firebase GraphQL Boilerplate
+# Firebase GraphQL Client Boilerplate
 
 This is a starter template for the GraphQL Client to run on the Cloud Functions for Firebase.
 
