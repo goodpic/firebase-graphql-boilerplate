@@ -1,12 +1,21 @@
 # Firebase Graphql Boilerplate
 
-GraphQL Client to run on the Firebase (cloud) functions. 
+This is a starter template for the GraphQL Client to run on the Cloud Functions for Firebase.
 
 Using:
 - Node 8
 - TypeScript
 - Apollo Client (GraphQL)
 - Jest
+
+## Why
+
+There are a couple of pitfalls to configure TypeScript and Apollo Client on Node environment such as:
+
+- https://github.com/apollographql/apollo-link/issues/513
+- https://github.com/apollographql/graphql-subscriptions/issues/83
+
+So just to make the start easy.
 
 # Configure
 
