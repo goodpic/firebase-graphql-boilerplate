@@ -16,19 +16,21 @@ const GraphqlClient = () => {
         cache: new InMemoryCache(),
       })
 
-      let films
-      await client.query({
-        query: gql`
-        query {
-          allFilms {
-            title
-          }
-        }`
-      }).then(
-        result => {
-          films = result.data
-        }  
-      )
+      let films = null
+      try {
+        const result =  await client.query({
+          query: gql`
+          query {
+            allFilms {
+              title
+            }
+          }`
+        })
+        films = result.data
+      }
+      catch (error) {
+        console.log(error);
+      }
       return films
     },
   }
