@@ -19,6 +19,8 @@ So just to make the start easy.
 
 # Configure
 
+## firebaserc
+
 Add .firebaserc to the project root directory to specify your Firebase project.
 
 ```json
@@ -28,6 +30,11 @@ Add .firebaserc to the project root directory to specify your Firebase project.
   }
 }
 ```
+
+## adminsdk JSON
+
+Add Firebase Admin SDK such as YOUR-PROJECT-NAME-firebase-adminsdk-XXXX-XXXXXX.json under 'functions/config'.
+
 
 ## Jest test
 
