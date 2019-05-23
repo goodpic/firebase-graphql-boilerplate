@@ -1,17 +1,23 @@
 import * as functions from 'firebase-functions';
 
 import GraphqlClient from './graphql/GraphqlClient'
+import FireStore from './firebase/firestore'
+
 const client = GraphqlClient()
+const firestore = new FireStore()
 
 // // Start writing Firebase Functions
 // // https://firebase.google.com/docs/functions/typescript
 //
 export const helloWorld = functions.https.onRequest(async (request, response) => {
   const result: any = await client.exec()
+  let list = []
   if (result) {
-    const list = result.allFilms.map((film: any) => { 
+    list = result.allFilms.map((film: any) => { 
       return `<li>${film.title}</li>`
     })
-    response.send(`<p>Hello from GraphQL!</p><ul>${list.join('')}<ul>`);
   }
+
+  const record = await firestore.getDocument('test', 'testDoc')
+  response.send(`<p>Hello ${record.first}!</p><ul>${list.join('')}<ul>`);
 });
