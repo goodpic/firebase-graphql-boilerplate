@@ -1,5 +1,5 @@
 const admin = require('firebase-admin');
-const serviceAccount = require("../../config/scanner-dbb3e-firebase-adminsdk-qrebv-6fa390b357.json");
+const serviceAccount = require("../../config/YOUR-PROJECT-NAME-firebase-adminsdk-XXXX-XXXXXX.json");
 
 class FireStore {
   db: any
