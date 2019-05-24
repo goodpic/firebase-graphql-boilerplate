@@ -1,13 +1,13 @@
 const admin = require('firebase-admin');
 const serviceAccount = require("../../config/YOUR-PROJECT-NAME-firebase-adminsdk-XXXX-XXXXXX.json");
 
-class FireStore {
+class MyFireStore {
   db: any
   
   constructor() {
     admin.initializeApp({
       credential: admin.credential.cert(serviceAccount),
-      databaseURL: "https://scanner-dbb3e.firebaseio.com"
+      databaseURL: "https://unittest-dfb64.firebaseio.com"
     });
     this.db = admin.firestore();
   }
@@ -33,12 +33,10 @@ class FireStore {
     const docRef = this.db.collection('test').doc('testDoc');
     const user = docRef.set({
       first: 'Jun',
-      last: 'Kaneko',
-      born: 1974
     });
     return user
   }
 
 }
 
-export default FireStore
+export default MyFireStore

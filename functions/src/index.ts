@@ -1,7 +1,7 @@
 import * as functions from 'firebase-functions';
 
 import GraphqlClient from './graphql/GraphqlClient'
-import FireStore from './firebase/firestore'
+import FireStore from './firebase/myfirestore'
 
 const client = GraphqlClient()
 const firestore = new FireStore()
