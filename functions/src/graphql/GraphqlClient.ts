@@ -8,6 +8,7 @@ const GraphqlClient = () => {
 
   return {
     exec: async () => {
+      console.log(typeof fetch);
       const client = new ApolloClient({
         link: createHttpLink({
           fetch: fetch,
